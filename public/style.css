@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-size: 100%;
+}
+
+.city {
+    background: rgb(204, 255, 204);
+    background: rgba(204, 255, 204, 0.25);
+    width: 100%;
+    padding: 20px;
+    margin-top: 10px;
+    border: 1px solid rgb(0, 0, 102);
+    border-radius: 4px;
+}
+
+.city:hover {
+    background: rgba(204, 255, 204, 0.1);
+}
+
+#city-name,
+.comment-text {
+    border: 1px solid rgb(0, 0, 102);
+    border-radius: 4px;
+}
+
+.comments-container,
+.add-comments-container {
+    display: none;
+}
+
+.comment {
+    padding-bottom: 5px;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.weather-data {
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(0, 0, 77);
+}
+
+.font-dk-blue {
+    color: rgb(0, 0, 77);
+}
+
+#error {
+    color: red;
+    background-color: beige;
+}
+
+.btn-danger {
+    margin-left: 20px;
+}
+
+.comment-name {
+    margin-left: 40px;
+}
+
+.add-comment {
+    margin-left: 15px;
+}
+
+.remove-comment {
+    position: absolute;
+    right: 0;
+}
+
+.remove-city {
+    position: absolute;
+    right: 0;
+}
+
+.tooltip-delete-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip-delete-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip-delete:hover .tooltip-delete-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.inline {
+    display: inline;
+}
+
+
+/* [data-icon]:before {
+    font-family: icons; */
+
+
+/* BYO icon font, mapped smartly */
+
+
+/* content: attr(data-icon);
+} */
+
+
+/*  */

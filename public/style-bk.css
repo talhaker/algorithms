@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+.booklook-header {
+    display: inline-block;
+}
+
+.ilb {
+    display: inline-block;
+}
+
+.books {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.book-details {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.book-data {
+    padding-left: 15px;
+}
+
+.busy-indicator {
+    display: none;
+}
