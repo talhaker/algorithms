@@ -14,7 +14,7 @@
             <h1 class="text-center font-dk-blue">Secret Cipher</h1>
         </div>
 
-        <form>
+        <form onsubmit="return false;">
             <div class="form-group">
                 <input type="text" id="input-string" class="form-control" placeholder="Enter string to be encripted">
                 <input type="text" id="secret-code" class="form-control" placeholder="Enter secret encription code">
@@ -28,6 +28,30 @@
                 </div>
             </div>
         </div>
+
+        <hr>
+
+        <div class="exercise-header">
+            <h1 class="text-center font-dk-blue">Jumble Arrays</h1>
+        </div>
+
+        <form onsubmit="return false;">
+            <div class="form-group">
+                <input type="text" id="array-one" class="form-control" placeholder="Enter first array elements">
+                <input type="text" id="array-two" class="form-control" placeholder="Enter second array elements">
+                <br/>
+                <button id="jumble" class="btn btn-primary" type="submit">Jumble</button>
+            </div>
+        </form>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div id="jumbled-array">
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
 
         <!-- <div class="row">
             <div class="col-md-10 col-md-offset-1">

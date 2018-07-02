@@ -57,9 +57,43 @@ function secretCipher(str, secret) {
 
 
 /********************************************* 
-*          REMOVE DUPLICATES
+*          JUMBLED
 *********************************************/
 
+// let colors = ["red", "indigo", "white", "teal", "yellow"];
+// let foods = ["bread", "cheese", "cucumber"];
+
+let getRandomIndex = (maxNumber) => {
+    return Math.floor(Math.random() * maxNumber);
+}
+
+let jumble = (arr1, arr2) => {
+    // To simplifay, concatenate the two arrays,
+    // and pick the next element serially.
+    // Than insert it into a random position
+    // in the jumbled array
+    let concatArr = arr1.concat(arr2);
+    let jumbleLength = 1;
+    let jumbledArr = [];
+
+    jumbledArr.push(concatArr[0]);
+    for (let ix = 1; ix < concatArr.length; ix++, jumbleLength++) {
+        // Determine where to insert the next element:
+        // Get a random index between 0 and the number of 
+        // elements, already in the array
+        let jumbleIx = getRandomIndex(jumbleLength + 1);
+        if (jumbleIx === jumbleLength) {
+            jumbledArr.push(concatArr[ix]);
+        }
+        else {
+            jumbledArr.splice(jumbleIx, 0, concatArr[ix]);
+        }
+    }
+
+    return jumbledArr
+}
+
+//console.log(jumble(colors, foods));
 
 
 
@@ -86,10 +120,23 @@ $('#encript').click(() => {
     let encripted = '<p>Encripted String: ' + secretCipher(str, secret) + '</p>';
     $('#encripted-string').append(encripted);
 });
-// $('.books').on('click', '.book-details', displaySelectedBook);
-// $(document).ajaxStart(function() {
-//     $(".busy-indicator").show();
-// });
-// $(document).ajaxStop(function() {
-//     $(".busy-indicator").hide();
-// });
+
+$('#jumble').click(() => {
+    let array1 = $('#array-one').val();
+    let array2 = $('#array-two').val();
+
+    let jumbledArray = jumble(array1.split(" "), array2.split(" "));
+    let jumbled = '<p>Jumbled Array: ';
+    if (jumbledArray.length === 0) {
+        jumbled += '[]';
+    }
+    else {
+        jumbled += jumbledArray[0];
+        for (let ix = 1; ix < jumbledArray.length; ix++) {
+            jumbled += ', ' + jumbledArray[ix];
+        }
+    }
+
+
+    $('#jumbled-array').append(jumbled);
+});
