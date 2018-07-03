@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Algorithms</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="exercise-header row">
+            <div class="col-md-10 col-md-offset-1">
+                <h3 class="font-dk-blue">Final Exercise</h3>
+            </div>
+        </div>
+
+        <script id="box-template" type="text/x-handlebars-template">
+            <div class="exercize-box" id="{{boxSize}}" style="width:{{boxSize}}px;height:{{boxSize}}px;"></div>
+        </script>
+
+        <!-- Final exercise -->
+        <form onsubmit="return false;">
+            <div class="form-group">
+                <input type="text" id="box-size" class="form-control" placeholder="Enter a new box size">
+                <br/>
+                <button id="add-box" class="btn btn-primary" type="submit">Add</button>
+                <button id="sort-boxes" class="btn btn-primary" type="submit">Sort</button>
+            </div>
+        </form>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div id="boxes">
+                </div>
+            </div>
+        </div>
+
+        <hr>
+    </div>
+
+    <script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="handlebars/dist/handlebars.js"></script>
+    <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="utils.js"></script>
+    <script type="text/javascript" src="final.js"></script>
+</body>
+
+</html>
